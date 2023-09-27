@@ -49,3 +49,38 @@ export const CloseButton = styled(Dialog.Close)`
   cursor: pointer;
   line-height: 0;
 `
+
+export const TransactionType = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+`
+
+interface TransactionTypeButtonProps {
+  $varaint: 'income' | 'outcome'
+}
+
+export const TransactionTypeButton = styled.button<TransactionTypeButtonProps>`
+  background: ${({ theme }) => theme['secondary-shape']};
+  color: ${({ theme }) => theme['base-text']};
+  border: none;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 400ms;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background: ${({ theme }) => theme['tertiary-shape']};
+  }
+
+  svg {
+    color: ${({ theme, $varaint }) =>
+      $varaint === 'income' ? theme['green-light'] : theme.red};
+  }
+`

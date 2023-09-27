@@ -15,11 +15,7 @@ export function Header() {
         e o radix não fornece um elemento com uma estilização predefinida */}
 
         <Dialog.Root>
-          {/* Dialog.Root precisa ficar envolta de todo o contexto do modal, tanto do botão quanto do modal*/}
           <Dialog.Trigger asChild>
-            {/* Trigger é o que vai fazer abrir ou fechar o modal, onde o mesmo já é um button
-            Porém pode ser usado a prop asChild para que o trigger utilize o elemento dentro da tag Root.Trigger
-          */}
             <Button content="Nova Transação" />
           </Dialog.Trigger>
 
