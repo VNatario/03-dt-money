@@ -15,4 +15,4 @@ export const defaultTheme = {
   ['titles']: '#E1E1E6',
 
   ['white']: '#FFFFFF',
-} as const;
+} as const
