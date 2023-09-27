@@ -11,8 +11,13 @@ export const SummaryContainer = styled.section`
   margin-top: -5rem;
 `
 
-export const SummaryCard = styled.div`
-  background: ${({ theme }) => theme['tertiary-shape']};
+interface SummaryCardProps {
+  $variant?: 'green'
+}
+
+export const SummaryCard = styled.div<SummaryCardProps>`
+  background: ${({ theme, $variant }) =>
+    $variant === 'green' ? theme['green-dark'] : theme['tertiary-shape']};
   padding: 1.5rem 2rem;
   border-radius: 6px;
 
@@ -20,6 +25,12 @@ export const SummaryCard = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: ${({ theme }) => theme['base-text']};
+  }
+
+  strong {
+    color: ${({ theme }) => theme['titles']};
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 2rem;
   }
 `
