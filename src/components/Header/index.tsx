@@ -2,6 +2,7 @@ import { HeaderContainer, HeaderContent } from './styles'
 import logoImg from '../../assets/logo.svg'
 import { Button } from '../Button'
 import * as Dialog from '@radix-ui/react-dialog'
+import { NewTransactionModal } from '../NewTransactionModal'
 
 export function Header() {
   return (
@@ -22,18 +23,7 @@ export function Header() {
             <Button content="Nova Transação" />
           </Dialog.Trigger>
 
-          <Dialog.Portal>
-            {/* Portal é uma funcionalidade do react de reendenizar um elemento filho dentro de um outro local da DOM, "coloca o conteudo fora de todas as divs"*/}
-            <Dialog.Overlay />
-            {/* fundo escuro com a opcadidade baixa */}
-            <Dialog.Content>
-              {/* Conteudo do modal */}
-              <Dialog.Title>Nova Transação</Dialog.Title>
-              {/* Titulo do modal para questoes de acessibilidade, assim como Dialog.Description*/}
-              <Dialog.Close />
-              {/* Botão de fechar */}
-            </Dialog.Content>
-          </Dialog.Portal>
+          <NewTransactionModal />
         </Dialog.Root>
       </HeaderContent>
     </HeaderContainer>
