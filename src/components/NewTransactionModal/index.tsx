@@ -1,31 +1,28 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { Content, Overlay } from './styles'
+import { CloseButton, Content, Overlay } from './styles'
 import { Button } from '../Button'
 import { Input } from '../Input'
+import { X } from '@phosphor-icons/react'
 
 export function NewTransactionModal() {
   return (
     <Dialog.Portal>
-      {/* Portal é uma funcionalidade do react de reendenizar um elemento filho dentro de um outro local da DOM, "coloca o conteudo fora de todas as divs"*/}
       <Overlay />
-      {/* <Dialog.Overlay /> */}
-      {/* fundo escuro com a opcadidade baixa */}
+
       <Content>
-        {/* <Dialog.Content> */}
-        {/* Conteudo do modal */}
         <Dialog.Title>Nova Transação</Dialog.Title>
-        {/* Titulo do modal para questoes de acessibilidade, assim como Dialog.Description*/}
+
+        <CloseButton>
+          <X size={24} />
+        </CloseButton>
 
         <form action="">
-          <Input type="text" placeholder="Desccrião" required />
+          <Input type="text" placeholder="Descrição" required />
           <Input type="number" placeholder="Preço" required />
           <Input type="text" placeholder="Categoria" required />
 
           <Button content="Cadastrar" type="submit" />
         </form>
-        <Dialog.Close />
-        {/* Botão de fechar */}
-        {/* </Dialog.Content> */}
       </Content>
     </Dialog.Portal>
   )

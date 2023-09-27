@@ -31,5 +31,21 @@ export const Content = styled(Dialog.Content)`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    button {
+      height: 3.625rem;
+      margin-top: 1.5rem;
+    }
   }
+`
+
+export const CloseButton = styled(Dialog.Close)`
+  position: absolute;
+  background: none;
+  border: none;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: ${({ theme }) => theme.placeholder};
+  cursor: pointer;
+  line-height: 0;
 `
