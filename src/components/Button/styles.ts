@@ -19,13 +19,13 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   border-radius: 6px;
   font-weight: 700;
   cursor: pointer;
-  transition: 400ms;
   background: ${({ theme }) => theme.green};
   color: ${({ theme }) => theme.white};
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  transition: background-color 400ms, color 400ms, border-color 400ms;
 
   &:hover {
     background: ${({ theme }) => theme['green-light']};
@@ -45,6 +45,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       background: none;
       border: 1px solid ${props.theme['green-light']};
       color: ${props.theme['green-light']};
+      padding: 0.875rem 2rem;
 
       &:hover {
         background: ${props.theme.green};
