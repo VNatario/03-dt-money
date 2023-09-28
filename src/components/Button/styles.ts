@@ -14,7 +14,7 @@ const sizeVariants = {
   lg: '1rem 2rem',
 }
 
-export const ButtonContainer = styled.button<ButtonContainerProps>`
+export const ButtonStyled = styled.button<ButtonContainerProps>`
   border: none;
   border-radius: 6px;
   font-weight: 700;
