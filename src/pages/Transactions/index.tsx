@@ -8,6 +8,10 @@ import {
 } from './styles'
 
 export function Transactions() {
+  // fetch('http://localhost:3000/transactions').then((response) => {
+  //   console.log(response)
+  // })
+
   return (
     <>
       <Header />
