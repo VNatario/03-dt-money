@@ -12,9 +12,41 @@
       "id": 2,
       "description": "Ifood",
       "type": "outcome",
-      "category": "Alimentacao",
+      "category": "Alimentação",
       "value": 59,
       "createdAt": "2023-09-28T00:40:21.420Z"
+    },
+    {
+      "id": 3,
+      "description": "Curso",
+      "type": "outcome",
+      "category": "Educação",
+      "value": 2000,
+      "createdAt": "'2023-09-28T15:21:32.887Z'"
+    },
+    {
+      "id": 4,
+      "description": "Freelancer de design gráfico",
+      "type": "income",
+      "category": "Venda",
+      "value": 8000,
+      "createdAt": "2023-09-28T10:15:42.123Z"
+    },
+    {
+      "id": 5,
+      "description": "Supermercado",
+      "type": "outcome",
+      "category": "Compras",
+      "value": 150,
+      "createdAt": "2023-09-28T12:30:15.789Z"
+    },
+    {
+      "id": 6,
+      "description": "Pagamento de aluguel",
+      "type": "outcome",
+      "category": "Moradia",
+      "value": 2500,
+      "createdAt": "2023-09-28T17:45:55.321Z"
     }
   ]
 }
