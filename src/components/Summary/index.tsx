@@ -5,32 +5,12 @@ import {
 } from '@phosphor-icons/react'
 import { SummaryContainer, SummaryCard } from './styles'
 import { useTheme } from 'styled-components'
-import { useContext } from 'react'
-import { TransactionsContext } from '../../context/TransactionsContext'
 import { priceFormatter } from '../../utils/formatter'
+import { useSummary } from '../../hooks/useSummary'
 
 export function Summary() {
   const theme = useTheme()
-  const { transactions } = useContext(TransactionsContext)
-
-  const summary = transactions.reduce(
-    (acc, cur) => {
-      if (cur.type === 'income') {
-        acc.income += cur.value
-        acc.total += cur.value
-      } else {
-        acc.outcome += cur.value
-        acc.total -= cur.value
-      }
-
-      return acc
-    },
-    {
-      income: 0,
-      outcome: 0,
-      total: 0,
-    }
-  )
+  const summary = useSummary()
 
   return (
     <SummaryContainer>
