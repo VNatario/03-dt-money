@@ -27,7 +27,7 @@ export const ButtonStyled = styled.button<ButtonContainerProps>`
   gap: 0.75rem;
   transition: background-color 400ms, color 400ms, border-color 400ms;
 
-  &:hover {
+  &:not(:disabled):hover {
     background: ${({ theme }) => theme['green-light']};
   }
 
@@ -39,6 +39,11 @@ export const ButtonStyled = styled.button<ButtonContainerProps>`
       font-size: 0.875rem;
     `}
 
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
   ${(props) =>
     props.$variant === 'outline' &&
     css`
@@ -47,7 +52,7 @@ export const ButtonStyled = styled.button<ButtonContainerProps>`
       color: ${props.theme['green-light']};
       padding: 0.875rem 2rem;
 
-      &:hover {
+      &:not(:disabled):hover {
         background: ${props.theme.green};
         color: ${props.theme.white};
         border-color: ${props.theme.green};
