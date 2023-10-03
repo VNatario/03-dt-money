@@ -25,7 +25,10 @@ export const ButtonStyled = styled.button<ButtonContainerProps>`
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  transition: background-color 400ms, color 400ms, border-color 400ms;
+  transition:
+    background-color 400ms,
+    color 400ms,
+    border-color 400ms;
 
   &:not(:disabled):hover {
     background: ${({ theme }) => theme['green-light']};

@@ -16,5 +16,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {content}
       </ButtonStyled>
     )
-  }
+  },
 )
+
+Button.displayName = 'Button'

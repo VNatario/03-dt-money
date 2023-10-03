@@ -26,7 +26,7 @@ export function Summary() {
       <SummaryCard>
         <header>
           <span>Saídas</span>
-          <ArrowCircleDown size={32} color={theme['red']} />
+          <ArrowCircleDown size={32} color={theme.red} />
         </header>
 
         <strong>{priceFormatter.format(summary.outcome)}</strong>
@@ -35,7 +35,7 @@ export function Summary() {
       <SummaryCard $variant="green">
         <header>
           <span>Total</span>
-          <CurrencyDollar size={32} color={theme['white']} />
+          <CurrencyDollar size={32} color={theme.white} />
         </header>
 
         <strong>{priceFormatter.format(summary.total)}</strong>

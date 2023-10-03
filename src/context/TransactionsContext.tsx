@@ -28,7 +28,7 @@ interface TransactionsProviderProps {
 }
 
 export const TransactionsContext = createContext<TransactionContextType>(
-  {} as TransactionContextType
+  {} as TransactionContextType,
 )
 
 export function TransactionsProvider({ children }: TransactionsProviderProps) {

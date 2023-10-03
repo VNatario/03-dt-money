@@ -28,7 +28,7 @@ export const SummaryCard = styled.div<SummaryCardProps>`
   }
 
   strong {
-    color: ${({ theme }) => theme['titles']};
+    color: ${({ theme }) => theme.titles};
     display: block;
     margin-top: 0.75rem;
     font-size: 2rem;
