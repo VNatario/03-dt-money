@@ -47,14 +47,6 @@
       "category": "Moradia",
       "value": 2500,
       "createdAt": "2023-09-28T17:45:55.321Z"
-    },
-    {
-      "description": "Coxinha",
-      "type": "outcome",
-      "category": "Alimentação",
-      "value": 10,
-      "createdAt": "2023-10-03T19:30:46.918Z",
-      "id": 7
     }
   ]
 }
